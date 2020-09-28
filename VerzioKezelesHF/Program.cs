@@ -11,15 +11,17 @@ namespace VerzioKezelesHF
         static void Main(string[] args)
         {
             double ossz = 0;
+            Console.WriteLine("Hány számot szeretne megadni?: ");
+            int hossz = Convert.ToInt32(Console.ReadLine());
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < hossz; i++)
             {
-                Console.WriteLine("Kérek 10 db számot: ");
+                Console.WriteLine("Kérek {0} db számot: ",hossz);
                 int szamok = Convert.ToInt32(Console.ReadLine());
                 ossz += szamok;
             }
 
-            Console.WriteLine("A számok átlaga: {0}",ossz/10);
+            Console.WriteLine("A számok átlaga: {0}",ossz/hossz);
 
 
         }
